@@ -1,0 +1,96 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  height: 100vh;
+  /* background-image: linear-gradient(to bottom, #667eea 0%, #764ba2 100%); */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.rect {
+  height: 50px;
+  width: 50px;
+  background-color: lightgrey;
+  padding: 0;
+  margin: 0;
+  margin-right: 1%;
+}
+.rect:hover {
+  background-color: red;
+}
+
+#track-1 {
+  display: flex;
+  justify-content: center;
+}
+
+#track-2 {
+  display: flex;
+  justify-content: center;
+}
+
+#track-3 {
+  display: flex;
+  justify-content: center;
+}
+
+#track-1-inst,
+#track-2-inst {
+  margin-left: 10%;
+}
+
+#track-1-inst button,
+#track-2-inst button {
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#track-1-inst button:focus + ul,
+#track-2-inst button:focus + ul {
+  opacity: 1;
+  transform: translateY(0px);
+  position: relative;
+  pointer-events: all;
+}
+
+#track-1-inst ul,
+#track-2-inst ul {
+  position: absolute;
+  height: auto;
+  width: 150px;
+  background-color: white;
+  border-radius: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+#track-1-inst li,
+#track-2-inst li {
+  height: auto;
+  width: auto;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: black;
+}

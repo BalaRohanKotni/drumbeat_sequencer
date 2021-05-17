@@ -2,15 +2,113 @@
 <html lang="en">
 
 <head>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Site's meta -->
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="A drum machine website.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tap Machine | Drum Machine</title>
 </head>
 
 <body>
-    <h1>A drum machine website</h1>
+    <div class="header">
+        <h2>Drum Machine</h2>
+    </div>
+    <div style="height: 30px"></div>
+
+    <div id="track-1">
+        <div class="circle" style="background: #EB5757;"></div>
+        <div style="width: 5%"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+
+        <div id="track-1-inst">
+            <button id="track-1-curr-inst">Kick-Tape⌄</button>
+            <ul id="track-1-list">
+                <li><button>Kick-Tape</button></li>
+                <li><button>Kick-808</button></li>
+                <li><button>Kick-Electro</button></li>
+                <li><button>Kick-Classic</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div id="track-2">
+        <div class="circle" style="background: #6FCF97;"></div>
+        <div style="width: 5%"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+
+        <div id="track-2-inst">
+            <button>
+                Clap-Tape⌄
+            </button>
+            <ul id="track-2-list">
+                <li><button>Clap-Tape</button></li>
+                <li><button>Clap-808</button></li>
+                <li><button>Clap-Fat</button></li>
+                <li><button>Clap-Crushed</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div style="height: 30px"></div>
+
+    <div id="track-3">
+        <div class="circle" style="background: #BB6BD9;"></div>
+        <div style="width: 5%"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+
+        <div id="track-3-inst">
+            <button>
+                Hithat-Tape
+                ⌄
+            </button>
+            <ul>
+                <li>Kick-Tape</li>
+                <li>Kick-808</li>
+                <li>Kick-Electro</li>
+                <li>Kick-Classic</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Drums
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
