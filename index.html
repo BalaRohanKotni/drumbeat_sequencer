@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="A drum machine website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tap Machine | Drum Machine</title>
 </head>
@@ -20,7 +21,8 @@
     <div class="header">
         <h2>Drum Machine</h2>
     </div>
-    <div style="height: 30px"></div>
+
+    <div style="height: 15%"></div>
 
     <div id="track-1">
         <div class="circle" style="background: #EB5757;"></div>
@@ -34,14 +36,18 @@
         <div class="rect"></div>
         <div class="rect"></div>
 
-        <div id="track-1-inst">
-            <button id="track-1-curr-inst">Kick-Tape⌄</button>
-            <ul id="track-1-list">
-                <li><button>Kick-Tape</button></li>
-                <li><button>Kick-808</button></li>
-                <li><button>Kick-Electro</button></li>
-                <li><button>Kick-Classic</button></li>
-            </ul>
+        <button id="track-1-inst" class="track-inst-selector">Kick Tape</button>
+
+        <div class="modal t1modal">
+            <div class="inst-picker modal-content">
+                <h2>Pick a drum</h2>
+                <div class="the-actual-picker">
+                    <button class="picker-button t1button">Kick Tape</button>
+                    <button class="picker-button t1button">Kick Electro</button>
+                    <button class="picker-button t1button">Kick 808</button>
+                    <button class="picker-button t1button">Kick Classic</button>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -60,16 +66,18 @@
         <div class="rect"></div>
         <div class="rect"></div>
 
-        <div id="track-2-inst">
-            <button>
-                Clap-Tape⌄
-            </button>
-            <ul id="track-2-list">
-                <li><button>Clap-Tape</button></li>
-                <li><button>Clap-808</button></li>
-                <li><button>Clap-Fat</button></li>
-                <li><button>Clap-Crushed</button></li>
-            </ul>
+        <button id="track-2-inst" class="track-inst-selector">Clap Tape</button>
+
+        <div class="modal t2modal">
+            <div class="inst-picker modal-content">
+                <h2>Pick a drum</h2>
+                <div class="the-actual-picker">
+                    <button class="picker-button t2button">Clap Tape</button>
+                    <button class="picker-button t2button">Clap Fat</button>
+                    <button class="picker-button t2button">Clap 808</button>
+                    <button class="picker-button t2button">Clap Crushed</button>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -88,17 +96,17 @@
         <div class="rect"></div>
         <div class="rect"></div>
 
-        <div id="track-3-inst">
-            <button>
-                Hithat-Tape
-                ⌄
-            </button>
-            <ul>
-                <li>Kick-Tape</li>
-                <li>Kick-808</li>
-                <li>Kick-Electro</li>
-                <li>Kick-Classic</li>
-            </ul>
+        <button id="track-3-inst" class="track-inst-selector">HitHat 808</button>
+
+        <div class="modal t3modal">
+            <div class="inst-picker modal-content">
+                <h2>Pick a drum</h2>
+                <div class="the-actual-picker">
+                    <button class="picker-button t3button">HitHat 808</button>
+                    <button class="picker-button t3button">HitHat Electro</button>
+                    <button class="picker-button t3button">HitHat Acoustc</button>
+                </div>
+            </div>
         </div>
 
     </div>

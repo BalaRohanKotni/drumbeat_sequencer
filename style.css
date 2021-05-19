@@ -4,7 +4,7 @@
 
 body {
   height: 100vh;
-  /* background-image: linear-gradient(to bottom, #667eea 0%, #764ba2 100%); */
+  background-image: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
 }
 
 .header {
@@ -26,6 +26,7 @@ body {
   margin: 0;
   margin-right: 1%;
 }
+
 .rect:hover {
   background-color: red;
 }
@@ -45,52 +46,67 @@ body {
   justify-content: center;
 }
 
-#track-1-inst,
-#track-2-inst {
-  margin-left: 10%;
-}
-
-#track-1-inst button,
-#track-2-inst button {
-  border: 0;
+/* button */
+.track-inst-selector {
+  margin-left: 15%;
+  border-radius: 0.6em;
   background: none;
+  border: 0.25em solid;
+  border-color: lightseagreen;
   color: white;
-  font-size: 18px;
-  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.track-inst-selector:hover {
+  transition: background 0.2s;
+  background: lightseagreen;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
   align-items: center;
+  opacity: 0.97;
 }
 
-#track-1-inst button:focus + ul,
-#track-2-inst button:focus + ul {
-  opacity: 1;
-  transform: translateY(0px);
-  position: relative;
-  pointer-events: all;
-}
-
-#track-1-inst ul,
-#track-2-inst ul {
-  position: absolute;
-  height: auto;
-  width: 150px;
-  background-color: white;
-  border-radius: 4px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.4s ease;
-  pointer-events: none;
-}
-
-#track-1-inst li,
-#track-2-inst li {
-  height: auto;
-  width: auto;
-  padding: 2%;
+.modal-content {
+  height: 50%;
+  width: 80%;
+  background-image: linear-gradient(to bottom, #48c6ef 0%, #6f86d6 100%);
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 0.6em;
   display: flex;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
+  flex-direction: column;
+}
+
+.the-actual-picker {
+  margin-top: 10%;
+}
+
+.picker-button {
+  border-radius: 0.6em;
+  background: none;
+  border: 0.25em solid;
+  border-color: lightseagreen;
   color: black;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: white;
+}
+
+.picker-button:hover {
+  transition: background 0.3s;
+  background: lightseagreen;
 }
