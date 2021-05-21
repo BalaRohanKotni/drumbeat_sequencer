@@ -14,139 +14,173 @@
     <meta name="description" content="A drum machine website.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tap Machine | Drum Machine</title>
+    <title>Drum Beats | Drum Beat Sequencer</title>
+    <link rel="shortcut icon" href="favicon.png">
 </head>
 
 <body>
     <div class="header">
-        <h2>Drum Machine</h2>
+        <h2>Drum Beat Sequencer</h2>
     </div>
-
     <div style="height: 5%"></div>
 
-    <div id="track-1">
-        <div class="circle" style="background: #EB5757;"></div>
-        <div style="width: 5%"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
+    <div class="track-area">
 
-        <button id="track-1-inst" class="track-inst-selector">Kick Tape</button>
 
-        <div class="modal t1modal">
-            <div class="inst-picker modal-content">
-                <h2>Pick a drum</h2>
-                <div class="the-actual-picker">
-                    <button class="picker-button t1button">Kick Tape</button>
-                    <button class="picker-button t1button">Kick Electro</button>
-                    <button class="picker-button t1button">Kick 808</button>
-                    <button class="picker-button t1button">Kick Classic</button>
+        <div id="track-1">
+            <div class="circle" style="background: #EB5757;"></div>
+            <div style="width: 5%"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+
+            <button id="track-1-inst" class="track-inst-selector">Kick Tape</button>
+
+            <div class="modal t1modal">
+                <div class="inst-picker modal-content">
+                    <h2>Pick a drum</h2>
+                    <div class="the-actual-picker">
+                        <button class="picker-button t1button">Kick Tape</button>
+                        <button class="picker-button t1button">Kick Electro</button>
+                        <button class="picker-button t1button">Kick 808</button>
+                        <button class="picker-button t1button">Kick Classic</button>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <div style="height: 20px"></div>
 
-    <div style="height: 20px"></div>
+        <div id="track-2">
+            <div class="circle" style="background: #6FCF97;"></div>
+            <div style="width: 5%"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
 
-    <div id="track-2">
-        <div class="circle" style="background: #6FCF97;"></div>
-        <div style="width: 5%"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
+            <button id="track-2-inst" class="track-inst-selector">Clap Tape</button>
 
-        <button id="track-2-inst" class="track-inst-selector">Clap Tape</button>
-
-        <div class="modal t2modal">
-            <div class="inst-picker modal-content">
-                <h2>Pick a drum</h2>
-                <div class="the-actual-picker">
-                    <button class="picker-button t2button">Clap Tape</button>
-                    <button class="picker-button t2button">Clap Fat</button>
-                    <button class="picker-button t2button">Clap 808</button>
-                    <button class="picker-button t2button">Clap Crushed</button>
+            <div class="modal t2modal">
+                <div class="inst-picker modal-content">
+                    <h2>Pick a drum</h2>
+                    <div class="the-actual-picker">
+                        <button class="picker-button t2button">Clap Tape</button>
+                        <button class="picker-button t2button">Clap Fat</button>
+                        <button class="picker-button t2button">Clap 808</button>
+                        <button class="picker-button t2button">Clap Crushed</button>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <div style="height: 30px"></div>
 
-    <div style="height: 30px"></div>
+        <div id="track-3">
+            <div class="circle" style="background: #BB6BD9;"></div>
+            <div style="width: 5%"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
 
-    <div id="track-3">
-        <div class="circle" style="background: #BB6BD9;"></div>
-        <div style="width: 5%"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
+            <button id="track-3-inst" class="track-inst-selector">HitHat 808</button>
 
-        <button id="track-3-inst" class="track-inst-selector">HitHat 808</button>
-
-        <div class="modal t3modal">
-            <div class="inst-picker modal-content">
-                <h2>Pick a drum</h2>
-                <div class="the-actual-picker">
-                    <button class="picker-button t3button">HiHat 808</button>
-                    <button class="picker-button t3button">HiHat Electro</button>
-                    <button class="picker-button t3button">HiHat Acoustic</button>
-                    <button class="picker-button t3button">HiHat Digital</button>
+            <div class="modal t3modal">
+                <div class="inst-picker modal-content">
+                    <h2>Pick a drum</h2>
+                    <div class="the-actual-picker">
+                        <button class="picker-button t3button">HiHat 808</button>
+                        <button class="picker-button t3button">HiHat Electro</button>
+                        <button class="picker-button t3button">HiHat Acoustic</button>
+                        <button class="picker-button t3button">HiHat Digital</button>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
+        <div style="height: 30px"></div>
 
-    <div style="height: 30px"></div>
+        <div id="track-4">
+            <div class="circle" style="background: #FCAA7F;"></div>
+            <div style="width: 5%"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
 
-    <div id="track-4">
-        <div class="circle" style="background: #FCAA7F;"></div>
-        <div style="width: 5%"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
-        <div class="rect"></div>
+            <button id="track-4-inst" class="track-inst-selector">Snare Tape</button>
 
-        <button id="track-4-inst" class="track-inst-selector">Snare Tape</button>
-
-        <div class="modal t4modal">
-            <div class="inst-picker modal-content">
-                <h2>Pick a drum</h2>
-                <div class="the-actual-picker">
-                    <button class="picker-button t4button">Snare Tape</button>
-                    <button class="picker-button t4button">Snare 808</button>
-                    <button class="picker-button t4button">Snare Big</button>
-                    <button class="picker-button t4button">Snare Electro</button>
+            <div class="modal t4modal">
+                <div class="inst-picker modal-content">
+                    <h2>Pick a drum</h2>
+                    <div class="the-actual-picker">
+                        <button class="picker-button t4button">Snare Tape</button>
+                        <button class="picker-button t4button">Snare 808</button>
+                        <button class="picker-button t4button">Snare Big</button>
+                        <button class="picker-button t4button">Snare Electro</button>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+        <div style="height: 30px"></div>
+
+        <div id="track-5">
+            <div class="circle" style="background: #322978;"></div>
+            <div style="width: 5%"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+
+            <button id="track-5-inst" class="track-inst-selector">Tom 808</button>
+
+            <div class="modal t5modal">
+                <div class="inst-picker modal-content">
+                    <h2>Pick a drum</h2>
+                    <div class="the-actual-picker">
+                        <button class="picker-button t5button">Tom 808</button>
+                        <button class="picker-button t5button">Tom Acoustic</button>
+                        <button class="picker-button t5button">Tom Analog</button>
+                        <button class="picker-button t5button">Tom FM</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <div class="footer">
         <button id="play-pause">Play</button>
         <!-- <h2>Tempo</h2> -->
         <div class="tempo-slider">
-            <h2 id="tempo-numerical">120</h2>
+            <h2 id="tempo-numerical">Tempo: 120</h2>
             <input type="range" min="1" max="140" value="120" class="slider" id="tempo">
         </div>
     </div>

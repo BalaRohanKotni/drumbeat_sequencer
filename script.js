@@ -26,10 +26,18 @@ let track4Instrument = 0;
 // Snare Big
 // Snare Electro
 
+let track5Instrument = 0;
+// Tom 808
+// Tom Acoustic
+// Tom Analog
+// Tom FM
+
 let track1 = [false, false, false, false, false, false, false, false,]
 let track2 = [false, false, false, false, false, false, false, false,]
 let track3 = [false, false, false, false, false, false, false, false,]
 let track4 = [false, false, false, false, false, false, false, false,]
+let track5 = [false, false, false, false, false, false, false, false,]
+
 
 let srcKick = [
     "sounds/kick/kick-tape.wav",
@@ -50,13 +58,20 @@ let srcHiHat = [
     "sounds/hihat/hihat-acoustic.wav",
     "sounds/hihat/hihat-electro.wav",
     "sounds/hihat/hihat-digital.wav",
-]
+];
 
 let srcSnare = [
     "sounds/snare/snare-tape.wav",
     "sounds/snare/snare-808.wav",
     "sounds/snare/snare-big.wav",
     "sounds/snare/snare-electro.wav",
+];
+
+let srcTom = [
+    "sounds/tom/tom-808.wav",
+    "sounds/tom/tom-acoustic.wav",
+    "sounds/tom/tom-analog.wav",
+    "sounds/tom/tom-fm.wav",
 ]
 
 function getPauseTimeByTempo(tempo) {
@@ -70,6 +85,7 @@ async function playSound() {
     const dTrack2 = document.getElementById("track-2").getElementsByClassName("rect");
     const dTrack3 = document.getElementById("track-3").getElementsByClassName("rect");
     const dTrack4 = document.getElementById("track-4").getElementsByClassName("rect");
+    const dTrack5 = document.getElementById("track-5").getElementsByClassName("rect");
 
     let index = 0;
     while (isplaying) {
@@ -77,6 +93,7 @@ async function playSound() {
         let pTrack2 = new Howl({ src: [srcClap[track2Instrument]] });
         let pTrack3 = new Howl({ src: [srcHiHat[track3Instrument]] });
         let pTrack4 = new Howl({ src: [srcSnare[track4Instrument]] });
+        let pTrack5 = new Howl({ src: [srcTom[track5Instrument]] });
 
         console.log("playing, time delay " + getPauseTimeByTempo(tempo) + ", index: " + index);
         console.log
@@ -88,6 +105,7 @@ async function playSound() {
         dTrack2[index].style.height = "55px";
         dTrack3[index].style.height = "55px";
         dTrack4[index].style.height = "55px";
+        dTrack5[index].style.height = "55px";
 
 
         if (track1[index] === true) {
@@ -102,12 +120,16 @@ async function playSound() {
         if (track4[index] === true) {
             pTrack4.play();
         }
+        if (track5[index] === true) {
+            pTrack5.play();
+        }
         await sleep(getPauseTimeByTempo(tempo));
 
         dTrack1[index].style.height = "50px";
         dTrack2[index].style.height = "50px";
         dTrack3[index].style.height = "50px";
         dTrack4[index].style.height = "50px";
+        dTrack5[index].style.height = "50px";
 
         index++;
         if (index > 7) {
@@ -131,7 +153,7 @@ function handleInstrumentPicker(modal, modal_button, trackInst, track) {
             if (track == 2) track2Instrument = i;
             if (track == 3) track3Instrument = i;
             if (track == 4) track4Instrument = i;
-
+            if (track == 5) track5Instrument = i;
         }
     }
 }
@@ -146,6 +168,7 @@ function handleBeatSelector(tRect, color, track) {
                 if (track == 2) track2[i] = false;
                 if (track == 3) track3[i] = false;
                 if (track == 4) track4[i] = false;
+                if (track == 5) track5[i] = false;
             }
             else {
                 tRect[i].style.backgroundColor = color;
@@ -153,6 +176,7 @@ function handleBeatSelector(tRect, color, track) {
                 if (track == 2) track2[i] = true;
                 if (track == 3) track3[i] = true;
                 if (track == 4) track4[i] = true;
+                if (track == 5) track5[i] = true;
             }
         }
     }
@@ -193,6 +217,14 @@ track4Inst.onclick = function () {
     handleInstrumentPicker(t4Modal, t4InstButton, track4Inst, 4);
 }
 
+const t5Modal = document.querySelector(".t5modal");
+const t5InstButton = document.getElementsByClassName("t5button");
+const track5Inst = document.getElementById("track-5-inst");
+
+track5Inst.onclick = function () {
+    handleInstrumentPicker(t5Modal, t5InstButton, track5Inst, 5);
+}
+
 // track beats 
 
 const t1beat = document.getElementById("track-1");
@@ -207,18 +239,23 @@ const t3beat = document.getElementById("track-3");
 const t3rects = t3beat.getElementsByClassName("rect");
 handleBeatSelector(t3rects, "rgb(187, 107, 217)", "3")
 
-// rgb(252, 170, 127)
-
 const t4beat = document.getElementById("track-4");
 const t4rects = t4beat.getElementsByClassName("rect");
 handleBeatSelector(t4rects, "rgb(252, 170, 127)", "4")
 
+const t5beat = document.getElementById("track-5");
+const t5rects = t5beat.getElementsByClassName("rect");
+handleBeatSelector(t5rects, "rgb(50, 41, 120)", "5")
+
+
+
+// tempo slider
 
 const tempoSlider = document.getElementById("tempo");
 const tempoNumerical = document.getElementById("tempo-numerical");
 
 tempoSlider.oninput = function () {
-    tempoNumerical.innerHTML = tempoSlider.value;
+    tempoNumerical.innerHTML = `Tempo: ${tempoSlider.value}`;
     tempo = tempoSlider.value;
     console.log(getPauseTimeByTempo(tempo));
 }
