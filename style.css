@@ -33,27 +33,15 @@ body {
   background-color: lightblue;
 }
 
-#track-1 {
+#track-1,
+#track-2,
+#track-3,
+#track-4 {
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#track-2 {
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#track-3 {
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* button */
 .track-inst-selector,
 #play-pause {
