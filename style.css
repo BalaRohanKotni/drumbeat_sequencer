@@ -5,6 +5,7 @@
 body {
   height: 100vh;
   background-image: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
 }
 
 .header {
@@ -25,29 +26,36 @@ body {
   padding: 0;
   margin: 0;
   margin-right: 1%;
+  transition: height 0.09s, width 0.09s;
 }
 
 .rect:hover {
-  background-color: red;
+  background-color: lightblue;
 }
 
 #track-1 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #track-2 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #track-3 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* button */
-.track-inst-selector {
+.track-inst-selector,
+#play-pause {
+  width: 150px;
+  height: 50px;
   margin-left: 15%;
   border-radius: 0.6em;
   background: none;
@@ -58,7 +66,13 @@ body {
   font-size: 16px;
 }
 
-.track-inst-selector:hover {
+#play-pause {
+  margin: 0;
+}
+
+.track-inst-selector:hover,
+#play-pause:hover {
+  cursor: pointer;
   transition: background 0.2s;
   background: lightseagreen;
 }
@@ -93,9 +107,14 @@ body {
 
 .the-actual-picker {
   margin-top: 10%;
+  display: flex;
+  padding: 0;
 }
 
 .picker-button {
+  height: 65px;
+  width: 150px;
+  margin: 1%;
   border-radius: 0.6em;
   background: none;
   border: 0.25em solid;
@@ -109,4 +128,61 @@ body {
 .picker-button:hover {
   transition: background 0.3s;
   background: lightseagreen;
+}
+
+.footer {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+}
+
+.footer h2 {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.tempo-slider {
+  position: absolute;
+  right: 10%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: lightseagreen;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 100px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
 }

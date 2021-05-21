@@ -102,9 +102,10 @@
             <div class="inst-picker modal-content">
                 <h2>Pick a drum</h2>
                 <div class="the-actual-picker">
-                    <button class="picker-button t3button">HitHat 808</button>
-                    <button class="picker-button t3button">HitHat Electro</button>
-                    <button class="picker-button t3button">HitHat Acoustc</button>
+                    <button class="picker-button t3button">HiHat 808</button>
+                    <button class="picker-button t3button">HiHat Electro</button>
+                    <button class="picker-button t3button">HiHat Acoustic</button>
+                    <button class="picker-button t3button">HiHat Digital</button>
                 </div>
             </div>
         </div>
@@ -112,9 +113,17 @@
     </div>
 
     <div class="footer">
-        Drums
-
+        <button id="play-pause">Play</button>
+        <!-- <h2>Tempo</h2> -->
+        <div class="tempo-slider">
+            <h2 id="tempo-numerical">120</h2>
+            <input type="range" min="1" max="140" value="120" class="slider" id="tempo">
+        </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js"
+        integrity="sha512-J+vDCDlH9TYo4uL0R5g9TCvJj8oGATXWi17AcOyUhuyEbJf0SF5HSmKv1gwPCEowauPanV0RAaYjyU+kbowtQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="script.js"></script>
 </body>
