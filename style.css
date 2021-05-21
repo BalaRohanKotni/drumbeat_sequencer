@@ -34,18 +34,21 @@ body {
 }
 
 #track-1 {
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #track-2 {
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #track-3 {
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;

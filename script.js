@@ -48,9 +48,9 @@ async function playSound() {
     while (isplaying) {
         console.log("playing, time delay " + getPauseTimeByTempo(tempo) + ", index: " + index);
 
-        dTrack1[index].style.height = "53px";
-        dTrack2[index].style.height = "53px";
-        dTrack3[index].style.height = "53px";
+        dTrack1[index].style.height = "55px";
+        dTrack2[index].style.height = "55px";
+        dTrack3[index].style.height = "55px";
 
 
         if (track1[index] === true) {
